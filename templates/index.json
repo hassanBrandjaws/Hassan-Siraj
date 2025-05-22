@@ -18,7 +18,8 @@
         "btn_link": "#.",
         "btn_text": "choose gift",
         "btn_icon": "shopify://shop_images/rightarrow.svg",
-        "menuicon": "shopify://shop_images/hamburgericon.svg"
+        "menuicon": "shopify://shop_images/hamburgericon.svg",
+        "closeicon": "shopify://shop_images/closemenu.svg"
       }
     },
     "image_banner": {
