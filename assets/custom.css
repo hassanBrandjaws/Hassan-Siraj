@@ -173,6 +173,7 @@ header .btn:hover img {
 
 .banner .btn img {
   filter: invert(1) brightness(2);
+  border: 1px solid #000;
 }
 
 .banner .btn:hover {
