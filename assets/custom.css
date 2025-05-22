@@ -236,6 +236,11 @@ header .headerWrapper p {
   header .hamburger img {
     display: block !important;
   }
+
+  .banner h1 {
+    font-size: 30px;
+    line-height: 32px;
+  }
 }
 
 /* Responsive Css Close */
