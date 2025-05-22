@@ -2,12 +2,11 @@
 
 @font-face {
   font-family: 'Jost';
-  src: url('{{ "Jost-Medium.eot" | asset_url }}');
-  src: url('{{ "Jost-Medium.eot?#iefix" | asset_url }}') format('embedded-opentype'),
-    url('{{ "Jost-Medium.woff2" | asset_url }}') format('woff2'),
-    url('{{ "Jost-Medium.woff" | asset_url }}') format('woff'),
-    url('{{ "Jost-Medium.ttf" | asset_url }}') format('truetype'),
-    url('{{ "Jost-Medium.svg#Jost-Medium" | asset_url }}') format('svg');
+  src: url('https://cdn.shopify.com/s/files/1/0955/0148/4400/files/Jost-Medium.eot?v=1747922514');
+  src: url('https://cdn.shopify.com/s/files/1/0955/0148/4400/files/Jost-Medium.eot?v=1747922514') format('embedded-opentype'),
+    url('https://cdn.shopify.com/s/files/1/0955/0148/4400/files/Jost-Medium.woff2?v=1747922514') format('woff2'),
+    url('https://cdn.shopify.com/s/files/1/0955/0148/4400/files/Jost-Medium.woff?v=1747922514') format('woff'),
+    url('https://cdn.shopify.com/s/files/1/0955/0148/4400/files/Jost-Medium.ttf?v=1747922514') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -15,12 +14,11 @@
 
 @font-face {
   font-family: 'Jost';
-  src: url('{{ "Jost-Regular.eot" | asset_url }}');
-  src: url('{{ "Jost-Regular.eot?#iefix" | asset_url }}') format('embedded-opentype'),
-    url('{{ "Jost-Regular.woff2" | asset_url }}') format('woff2'),
-    url('{{ "Jost-Regular.woff" | asset_url }}') format('woff'),
-    url('{{ "Jost-Regular.ttf" | asset_url }}') format('truetype'),
-    url('{{ "Jost-Regular.svg#Jost-Regular" | asset_url }}') format('svg');
+  src: url('https://cdn.shopify.com/s/files/1/0955/0148/4400/files/Jost-Regular.eot?v=1747922515');
+  src: url('https://cdn.shopify.com/s/files/1/0955/0148/4400/files/Jost-Regular.eot?v=1747922515') format('embedded-opentype'),
+    url('https://cdn.shopify.com/s/files/1/0955/0148/4400/files/Jost-Regular.woff2?v=1747922514') format('woff2'),
+    url('https://cdn.shopify.com/s/files/1/0955/0148/4400/files/Jost-Regular.woff?v=1747922514') format('woff'),
+    url('https://cdn.shopify.com/s/files/1/0955/0148/4400/files/Jost-Regular.ttf?v=1747922514') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -30,12 +28,11 @@
 
 @font-face {
   font-family: 'Lustria';
-  src: url('{{ "Lustria-Regular.eot" | asset_url }}');
-  src: url('{{ "Lustria-Regular.eot?#iefix" | asset_url }}') format('embedded-opentype'),
-    url('{{ "Lustria-Regular.woff2" | asset_url }}') format('woff2'),
-    url('{{ "Lustria-Regular.woff" | asset_url }}') format('woff'),
-    url('{{ "Lustria-Regular.ttf" | asset_url }}') format('truetype'),
-    url('{{ "Lustria-Regular.svg#Lustria-Regular" | asset_url }}') format('svg');
+  src: url('https://cdn.shopify.com/s/files/1/0955/0148/4400/files/Lustria-Regular.eot?v=1747922490');
+  src: url('https://cdn.shopify.com/s/files/1/0955/0148/4400/files/Lustria-Regular.eot?v=1747922490') format('embedded-opentype'),
+    url('https://cdn.shopify.com/s/files/1/0955/0148/4400/files/Lustria-Regular.woff2?v=1747922490') format('woff2'),
+    url('https://cdn.shopify.com/s/files/1/0955/0148/4400/files/Lustria-Regular.woff?v=1747922490') format('woff'),
+    url('https://cdn.shopify.com/s/files/1/0955/0148/4400/files/Lustria-Regular.ttf?v=1747922490') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
