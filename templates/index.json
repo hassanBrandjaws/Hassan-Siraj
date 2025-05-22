@@ -17,7 +17,8 @@
         "tagline": "Find the ideal gift for your loved ones.",
         "btn_link": "#.",
         "btn_text": "choose gift",
-        "btn_icon": "shopify://shop_images/rightarrow.svg"
+        "btn_icon": "shopify://shop_images/rightarrow.svg",
+        "menuicon": "shopify://shop_images/hamburgericon.svg"
       }
     },
     "image_banner": {
