@@ -59,3 +59,17 @@ header .headerWrapper p {
 }
 
 /* Header Css Close */
+
+/* Responsive Css Start */
+
+@media (max-width: 991px) {
+  header .logo {
+    max-width: 150px;
+  }
+
+  .btn {
+    padding: 8px 24px;
+  }
+}
+
+/* Responsive Css Close */
