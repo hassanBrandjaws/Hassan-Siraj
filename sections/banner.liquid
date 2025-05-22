@@ -12,7 +12,7 @@
           <p>{{ section.settings.bannerParagraph }}</p>
         {% endif %}
         {% if section.settings.bannerBtnText != blank %}
-          <a class="btn" href="{{ section.settings.bannerBtnLink }}">{{ section.settings.bannerBtnText }}</a>
+          <a class="btn" href="{{ section.settings.bannerBtnLink }}">{{ section.settings.bannerBtnText }} <img width="" height="" src="{{ section.settings.buttonicon |  img_url: 'master' }}" /></a>
         {% endif %}
       </div>
       {% if section.settings.bannerBtnText != blank %}
