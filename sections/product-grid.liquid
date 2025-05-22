@@ -40,7 +40,7 @@
                       <label class="varient-label">Color</label>
                       <div class="color-options">
                         {% for color in color_options.values %}
-                            <div class="color-box" data-color="{{ color }}" title="{{ color }}" style="border-color: {{ color }};">
+                            <div class="color-box {{ color }}" data-color="{{ color }}" title="{{ color }}" style="border-color: {{ color }};">
                                 <span class="color-label">{{ color }}</span>
                             </div>
                         {% endfor %}
