@@ -163,9 +163,18 @@ header .headerWrapper p {
   border: 1px #000;
 }
 
+.MobileBtn {
+  display: none;
+}
 /* Banner Css Close */
 
 /* Responsive Css Start */
+
+@media (max-width: 1024px) {
+  .banner::before {
+    display: none;
+  }
+}
 
 @media (max-width: 991px) {
   header .logo {
@@ -180,7 +189,8 @@ header .headerWrapper p {
 @media (max-width: 767px) {
   .mobileHide,
   .hamburger .closeicon,
-  .hamburger.active .menuicon {
+  .hamburger.active .menuicon,
+  .banner .btn {
     display: none;
   }
 
@@ -191,10 +201,6 @@ header .headerWrapper p {
   header {
     box-shadow: 0px 2px 4px 0px #00000026;
     padding: 24px 0px;
-  }
-
-  header .hamburger img {
-    display: block;
   }
 
   .mobile-menu {
@@ -225,7 +231,9 @@ header .headerWrapper p {
   .hamburger,
   .spacer,
   .hamburger.active .closeicon,
-  .mobile-menu {
+  .mobile-menu,
+  .banner .btn.MobileBtn,
+  header .hamburger img {
     display: block !important;
   }
 }
