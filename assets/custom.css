@@ -227,7 +227,7 @@ header .btn img {
 
 .ProductsGridSection .product-grid .product-card {
   position: relative;
-  width: calc(33% - 20px);
+  width: calc(33% - 10px);
 }
 
 .product-card img {
@@ -243,6 +243,11 @@ header .btn img {
   height: 20px;
   object-fit: contain;
   min-height: 20px;
+}
+
+.plus-icon {
+  position: absolute;
+  z-index: 9;
 }
 
 .ProductsGridSection {
