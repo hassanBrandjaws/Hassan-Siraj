@@ -5,6 +5,10 @@ header {
   padding: 30px 0px;
 }
 
+body {
+  font-family: 'Jost';
+}
+
 .container {
   max-width: 1450px;
   margin: 0 auto;
