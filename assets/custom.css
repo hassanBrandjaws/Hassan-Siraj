@@ -1,3 +1,19 @@
+/* Reset Css Start */
+
+h1 {
+  font-size: 70px;
+  font-weight: 500;
+  color: #000;
+}
+
+h2 {
+  font-size: 36px;
+  font-family: 'Lustria';
+  color: #000;
+}
+
+/* Reset Css Close */
+
 /* Header Css Start */
 
 header {
@@ -65,6 +81,30 @@ header .headerWrapper p {
 }
 
 /* Header Css Close */
+
+/* Banner Css Start */
+
+.banner {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: calc(100vh - 80px);
+}
+
+.banner h1 {
+  margin: 0px;
+}
+
+.banner p {
+  margin: 50px 0px;
+}
+
+.banner .btn {
+  background: #000;
+  color: #fff;
+}
+
+/* Banner Css Close */
 
 /* Responsive Css Start */
 
