@@ -182,10 +182,7 @@ header .btn:hover img {
 }
 
 .banner .btn:hover img {
-  background: #fff544;
-  border: 1px solid #fff544;
-  color: #000;
-  filter: invert(1) brightness(1);
+  filter: invert(1) brightness(0);
 }
 
 /* Banner Css Close */
