@@ -1,0 +1,37 @@
+<section class="ProductsGridSection">
+  <div class="container">
+    <h2>{{ section.settings.sectiontitle }}</h2>
+
+    <div class="product-grid">
+      {% for block in section.blocks %}
+        {% assign product = all_products[block.settings.product] %}
+        {% if product %}
+          <div class="product-card">
+            <img width="" height="" src="{{ product.featured_image |  img_url: 'master' }}" alt="{{ product.title }}">
+            <div class="plus-icon">
+              <img width="" height="" src="{{ block.settings.plus_icon |  img_url: 'master' }}" alt="">
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Products Grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "sectiontitle",
+      "label": "Section title"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Products Grid"
+    }
+  ]
+}
+{% endschema %}
