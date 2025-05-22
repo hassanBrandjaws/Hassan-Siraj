@@ -13,47 +13,6 @@ h2 {
   color: #000;
 }
 
-/* Reset Css Close */
-
-/* Header Css Start */
-
-header {
-  background: #f5f5f5;
-  padding: 10px 0px;
-}
-
-body {
-  font-family: 'Jost';
-  font-size: 16px;
-}
-
-.container {
-  max-width: 1450px;
-  margin: 0 auto;
-  padding: 0px 15px;
-}
-
-header .logo {
-  max-width: 200px;
-}
-
-header .logo img {
-  width: 100%;
-  display: block;
-}
-
-header .headerWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-header .headerWrapper p {
-  font-weight: 400;
-  margin: 0px;
-  color: #000;
-}
-
 .btn {
   background: #fff544;
   border: 1px solid #fff544;
@@ -98,10 +57,55 @@ header .headerWrapper p {
   transition: 0.5s all ease-in-out;
 }
 
+/* Reset Css Close */
+
+/* Header Css Start */
+
+header {
+  background: #f5f5f5;
+  padding: 10px 0px;
+}
+
+body {
+  font-family: 'Jost';
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+header .logo {
+  max-width: 200px;
+}
+
+header .logo img {
+  width: 100%;
+  display: block;
+}
+
+header .headerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .headerWrapper p {
+  font-weight: 400;
+  margin: 0px;
+  color: #000;
+}
+
 .hamburger,
 .spacer,
 .mobile-menu {
   display: none !important;
+}
+
+header .btn:hover img {
+  filter: invert(1) brightness(1);
 }
 
 /* Header Css Close */

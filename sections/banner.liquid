@@ -16,7 +16,7 @@
         {% endif %}
       </div>
       {% if section.settings.bannerBtnText != blank %}
-        <a class="btn MobileBtn" href="{{ section.settings.bannerBtnLink }}">{{ section.settings.bannerBtnText }}</a>
+        <a class="btn MobileBtn" href="{{ section.settings.bannerBtnLink }}">{{ section.settings.bannerBtnText }} <img width="" height="" src="{{ section.settings.buttonicon |  img_url: 'master' }}" /></a>
       {% endif %}
     </div>
   </div>
@@ -56,6 +56,11 @@
       "type": "text",
       "id": "bannerBtnText",
       "label": "Banner Button Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "buttonicon",
+      "label": "Select Button Icon"
     }
   ],
   "presets": [
