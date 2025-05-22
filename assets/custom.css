@@ -293,8 +293,7 @@ header .btn img {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: #000;
-  opacity: 0.6;
+  background: #00000060;
   z-index: 9999;
   justify-content: center;
   align-items: center;
@@ -353,8 +352,6 @@ header .btn img {
   flex-wrap: wrap;
   align-items: flex-start;
 }
-
-
 
 /* Product Grid Section Css Close */
 
