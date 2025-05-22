@@ -59,7 +59,8 @@ header .headerWrapper p {
 }
 
 .hamburger,
-.spacer {
+.spacer,
+.mobile-menu {
   display: none;
 }
 
@@ -124,7 +125,8 @@ header .headerWrapper p {
 
   .hamburger,
   .spacer,
-  .hamburger.active .closeicon {
+  .hamburger.active .closeicon,
+  .mobile-menu {
     display: block !important;
   }
 }
