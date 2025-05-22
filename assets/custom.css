@@ -109,10 +109,22 @@ header .headerWrapper p {
 /* Banner Css Start */
 
 .banner {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
   height: calc(100vh - 80px);
+  position: relative;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 350px;
+  background: #fff;
+  bottom: 0;
+  z-index: 9;
 }
 
 .banner h1 {
