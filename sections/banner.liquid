@@ -3,16 +3,18 @@
   style="background: {{ section.settings.bannerbackground_color }} url({{ section.settings.banner_image |  img_url: 'master' }});"
 >
   <div class="container">
-    <div class="bannerContent">
-      {% if section.settings.bannerHeading != blank %}
-        <h1>{{ section.settings.bannerHeading }}</h1>
-      {% endif %}
-      {% if section.settings.bannerParagraph != blank %}
-        <p>{{ section.settings.bannerParagraph }}</p>
-      {% endif %}
-      {% if section.settings.bannerBtnText != blank %}
-        <a class="btn" href="{{ section.settings.bannerBtnLink }}">{{ section.settings.bannerBtnText }}</a>
-      {% endif %}
+    <div class="BannerWrapper">
+      <div class="bannerContent">
+        {% if section.settings.bannerHeading != blank %}
+          <h1>{{ section.settings.bannerHeading }}</h1>
+        {% endif %}
+        {% if section.settings.bannerParagraph != blank %}
+          <p>{{ section.settings.bannerParagraph }}</p>
+        {% endif %}
+        {% if section.settings.bannerBtnText != blank %}
+          <a class="btn" href="{{ section.settings.bannerBtnLink }}">{{ section.settings.bannerBtnText }}</a>
+        {% endif %}
+      </div>
     </div>
   </div>
 </section>
