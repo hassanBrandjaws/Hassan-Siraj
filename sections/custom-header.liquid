@@ -2,7 +2,8 @@
   <div class="container">
     <div class="headerWrapper">
       <div class="hamburger" id="hamburger" role="button">
-        <img width="" height="" src="{{ section.settings.menuicon |  img_url: 'master' }}">
+        <img class="menuicon" width="" height="" src="{{ section.settings.menuicon |  img_url: 'master' }}">
+        <img class="closeicon" width="" height="" src="{{ section.settings.closeicon |  img_url: 'master' }}">
       </div>
 
       <div class="mobile-menu" id="mobileMenu">
@@ -71,6 +72,11 @@
         "type": "image_picker",
         "id": "menuicon",
         "label": "Select Mobile Menu Icon"
+    },
+    {
+        "type": "image_picker",
+        "id": "closeicon",
+        "label": "Select Menu Closing Icon"
     }
   ],
   "presets": [

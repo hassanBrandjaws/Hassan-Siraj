@@ -78,7 +78,9 @@ header .headerWrapper p {
 }
 
 @media (max-width: 767px) {
-  .mobileHide {
+  .mobileHide,
+  .hamburger .closeicon,
+  .hamburger.active .menuicon {
     display: none;
   }
 
@@ -93,7 +95,7 @@ header .headerWrapper p {
 
   .mobile-menu {
     position: absolute;
-    top: 48px;
+    top: 70px;
     width: 100%;
     left: 0;
     max-height: 0px;
@@ -108,7 +110,7 @@ header .headerWrapper p {
   .mobile-menu.show {
     transition: 0.5s all ease-in-out;
     max-height: 400px;
-    padding: 30px 20px;
+    padding: 25px 20px;
   }
 
   .mobile-menu .btn {
@@ -117,7 +119,8 @@ header .headerWrapper p {
   }
 
   .hamburger,
-  .spacer {
+  .spacer,
+  .hamburger.active .closeicon {
     display: block !important;
   }
 }
