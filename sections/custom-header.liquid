@@ -10,7 +10,7 @@
       <div class="headerButton">
         <a href="{{ section.settings.btn_link }}">
           {{- section.settings.btn_text }}
-          <img width="" height="" src="{{ section.settings.btn_icon }}"
+          <img width="" height="" src="{{ section.settings.btn_icon |  img_url: 'master' }}"
         ></a>
       </div>
     </div>
