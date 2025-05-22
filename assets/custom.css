@@ -247,11 +247,10 @@ header .btn img {
 
 .plus-icon {
   position: absolute;
-  top: 10%;
+  top: 54%;
   z-index: 9;
-  right: 10%;
+  right: 37%;
 }
-
 
 .ProductsGridSection {
   padding: 80px 0px;
