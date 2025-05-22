@@ -191,7 +191,7 @@ header .headerWrapper p {
   .hamburger .closeicon,
   .hamburger.active .menuicon,
   .banner .btn {
-    display: none;
+    display: none !important;
   }
 
   .hamburger {
