@@ -166,7 +166,24 @@ header .headerWrapper p {
 .MobileBtn {
   display: none;
 }
+
 /* Banner Css Close */
+
+/* Banner Tagline Css Start */
+
+.tagline {
+  background: #f5f5f5;
+  padding: 10px 0px;
+  text-align: center;
+}
+
+.tagline p {
+  text-align: center;
+  font-size: 16px;
+  color: #000;
+}
+
+/* Banner Tagline Css Close */
 
 /* Responsive Css Start */
 

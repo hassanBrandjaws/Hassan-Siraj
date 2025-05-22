@@ -1,0 +1,23 @@
+<section class="tagline">
+  <div class="container">
+    <p>{{ section.settings.bannertagline }}</p>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "banner Tagline",
+  "settings": [
+    {
+      "type": "text",
+      "id": "bannertagline",
+      "label": "Enter Banner Tagline"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner Tagline"
+    }
+  ]
+}
+{% endschema %}
