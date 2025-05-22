@@ -13,7 +13,11 @@
       "type": "custom-header",
       "name": "Custom Header",
       "settings": {
-        "logo": "shopify://shop_images/logo.svg"
+        "logo": "shopify://shop_images/logo.svg",
+        "tagline": "Find the ideal gift for your loved ones.",
+        "btn_link": "#.",
+        "btn_text": "choose gift",
+        "btn_icon": "shopify://shop_images/rightarrow.svg"
       }
     },
     "image_banner": {
