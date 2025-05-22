@@ -11,19 +11,24 @@
             <div class="plus-icon">
               <img width="" height="" src="{{ block.settings.plus_icon |  img_url: 'master' }}" alt="">
             </div>
-          </div>
-          <!-- Popup -->
-          <div class="popup-overlay">
-            <div class="popup-content">
-              <span class="popup-close">&times;</span>
-              <div class="product-header">
-                <div class="product-image">
-                  <img width="" height="" src="{{ product.featured_image |  img_url: 'master' }}" alt="{{ product.title }}">
-                </div>
-                <div class="product-info">
-                  <h4 class="popup-title">{{ product.title }}</h4>
-                  <div class="product-price">{{ product.price | money }}</div>
-                  <p class="popup-description">{{ product.description | strip_html | truncatewords: 20 }}</p>
+            <!-- Popup -->
+            <div class="popup-overlay">
+              <div class="popup-content">
+                <span class="popup-close">&times;</span>
+                <div class="product-header">
+                  <div class="product-image">
+                    <img
+                      width=""
+                      height=""
+                      src="{{ product.featured_image |  img_url: 'master' }}"
+                      alt="{{ product.title }}"
+                    >
+                  </div>
+                  <div class="product-info">
+                    <h4 class="popup-title">{{ product.title }}</h4>
+                    <div class="product-price">{{ product.price | money }}</div>
+                    <p class="popup-description">{{ product.description | strip_html | truncatewords: 20 }}</p>
+                  </div>
                 </div>
               </div>
             </div>
