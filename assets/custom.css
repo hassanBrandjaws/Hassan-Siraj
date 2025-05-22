@@ -64,6 +64,7 @@ header .headerWrapper p {
   text-transform: uppercase;
   display: flex;
   align-items: center;
+  width: fit-content;
   gap: 12px;
   transition: 0.5s all ease-in-out;
 }
@@ -80,6 +81,7 @@ header .headerWrapper p {
   align-items: center;
   gap: 12px;
   transition: 0.5s all ease-in-out;
+  width: fit-content;
 }
 
 .BlackBtn:hover {
@@ -134,7 +136,11 @@ header .headerWrapper p {
 }
 
 .banner p {
-  margin: 30px 0 40px;
+  margin: 20px 0 40px;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+  color: black;
 }
 
 .banner .btn {
