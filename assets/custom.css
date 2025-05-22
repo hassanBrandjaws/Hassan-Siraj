@@ -251,7 +251,14 @@ header .headerWrapper p {
   }
 
   .banner .container .BannerWrapper {
-    align-items: self-start;
+    justify-content: center;
+    align-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .banner {
+    padding-bottom: 70px;
   }
 
   .banner p {
