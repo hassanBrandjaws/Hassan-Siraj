@@ -14,7 +14,7 @@ h2 {
 }
 
 /* Reset Css Close */
- 
+
 /* Header Css Start */
 
 header {
@@ -117,14 +117,30 @@ header .headerWrapper p {
   margin: 0px;
 }
 
+.banner .BannerWrapper .bannerContent {
+  max-width: 600px;
+  background-color: white;
+  padding: 30px;
+}
+
+.banner .container {
+  height: 100%;
+}
+
+.banner .container .BannerWrapper {
+  height: 100%;
+  display: flex;
+  align-items: end;
+}
+
 .banner p {
-  margin: 50px 0px;
+  margin: 30px 0 40px;
 }
 
 .banner .btn {
   background: #000;
   color: #fff;
-  border: 1px  #000;
+  border: 1px #000;
 }
 
 /* Banner Css Close */
