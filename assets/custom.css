@@ -252,6 +252,10 @@ header .btn img {
   right: 37%;
 }
 
+.ProductsGridSection .product-grid .product-card:nth-child(2) .plus-icon {
+  display: none;
+}
+
 .ProductsGridSection {
   padding: 80px 0px;
 }
