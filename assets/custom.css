@@ -7,6 +7,7 @@ header {
 
 body {
   font-family: 'Jost';
+  font-size: 16px;
 }
 
 .container {
@@ -22,6 +23,34 @@ header .logo {
 header .logo img {
   width: 100%;
   display: block;
+}
+
+header .headerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .headerWrapper p {
+  font-weight: 400;
+  margin: 0px;
+  color: #000;
+}
+
+.btn {
+  background: #fff544;
+  border: 1px solid #fff544;
+  color: #000;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: 0.5s all ease-in-out;
+}
+
+.btn:hover {
+  background: #000;
+  border: 1px solid #000;
+  color: #fff;
+  transition: 0.5s all ease-in-out;
 }
 
 /* Header Css Close */
