@@ -4,6 +4,15 @@
       <div class="logo">
         <img width="" height="" src="{{ section.settings.logo |  img_url: 'master'  }}" alt="">
       </div>
+      <div class="headerContent">
+        <p>{{ section.settings.tagline }}</p>
+      </div>
+      <div class="headerButton">
+        <a href="{{ section.settings.btn_link }}">
+          {{- section.settings.btn_text }}
+          <img width="" height="" src="{{ section.settings.btn_icon }}"
+        ></a>
+      </div>
     </div>
   </div>
 </header>
@@ -16,6 +25,26 @@
       "type": "image_picker",
       "id": "logo",
       "label": "Select Logo"
+    },
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Enter Tagline"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Enter Button Link"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Enter Button Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "btn_icon",
+      "label": "Select Button Icon"
     }
   ],
   "presets": [
