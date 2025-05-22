@@ -10,6 +10,10 @@
       <div class="headerButton">
         <a class="btn" href="{{ section.settings.btn_link }}"> {{ section.settings.btn_text }} <img width="" height="" src="{{ section.settings.btn_icon |  img_url: 'master' }}"></a>
       </div>
+
+      <div class="hamburger" id="hamburger" role="button">
+<img width="" height="" src="{{ section.settings.menuicon |  img_url: 'master' }}">
+      </div>
     </div>
   </div>
 </header>
@@ -42,6 +46,11 @@
       "type": "image_picker",
       "id": "btn_icon",
       "label": "Select Button Icon"
+    },
+    {
+        "type": "image_picker",
+        "id": "menuicon",
+        "label": "Select Mobile Menu Icon"
     }
   ],
   "presets": [
