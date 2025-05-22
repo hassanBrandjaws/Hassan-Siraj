@@ -180,6 +180,8 @@ header .headerWrapper p {
 .tagline p {
   text-align: center;
   font-size: 16px;
+  margin: 0px;
+  text-transform: uppercase;
   color: #000;
 }
 
