@@ -61,7 +61,7 @@ header .headerWrapper p {
 .hamburger,
 .spacer,
 .mobile-menu {
-  display: none;
+  display: none !important;
 }
 
 /* Header Css Close */
