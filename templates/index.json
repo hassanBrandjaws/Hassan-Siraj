@@ -22,6 +22,18 @@
         "closeicon": "shopify://shop_images/closemenu.svg"
       }
     },
+    "banner_QU7VL7": {
+      "type": "banner",
+      "name": "Banner Section",
+      "settings": {
+        "banner_image": "shopify://shop_images/Banner.png",
+        "bannerbackground_color": "#ffffff",
+        "bannerHeading": "The Gift Guide",
+        "bannerParagraph": "<p>Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.</p>",
+        "bannerBtnLink": "",
+        "bannerBtnText": "Shop Now"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -94,6 +106,7 @@
   },
   "order": [
     "custom_header_f7HLK6",
+    "banner_QU7VL7",
     "image_banner",
     "featured_collection"
   ]
