@@ -295,7 +295,7 @@ header .btn img {
   height: 100vh;
   background: #00000060;
   z-index: 9999;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
 }
 
@@ -338,7 +338,7 @@ header .btn img {
 .ProductsGridSection .color-box.selected {
   border-color: #000;
 }
-.ProductsGridSection .popup-button {
+/* .ProductsGridSection .popup-button {
   background-color: black;
   color: #fff;
   padding: 10px 20px;
@@ -346,7 +346,23 @@ header .btn img {
   display: inline-block;
   border-radius: 5px;
   margin-top: 20px;
+} */
+
+.ProductsGridSection .popup-button img {
+  min-height: fit-content !important;
+  width: fit-content !important;
 }
+
+/* .ProductsGridSection .popup-button {
+  background-color: black;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  margin-top: 20px;
+} */
+
 .ProductsGridSection .product-header {
   display: flex;
   flex-wrap: wrap;
