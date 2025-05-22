@@ -48,19 +48,53 @@
         "product_block_XPtmbw": {
           "type": "product_block",
           "settings": {
-            "product": "black-leather-bag"
+            "product": "black-leather-bag",
+            "plus_icon": "shopify://shop_images/plusIcon.svg"
           }
         },
-        "icon_wpAPEV": {
-          "type": "icon",
+        "product_block_4WWznQ": {
+          "type": "product_block",
           "settings": {
+            "product": "blue-silk-tuxedo",
+            "plus_icon": "shopify://shop_images/plusIcon.svg"
+          }
+        },
+        "product_block_mzafPU": {
+          "type": "product_block",
+          "settings": {
+            "product": "chequered-red-shirt",
+            "plus_icon": "shopify://shop_images/plusIcon.svg"
+          }
+        },
+        "product_block_JMNA3z": {
+          "type": "product_block",
+          "settings": {
+            "product": "classic-leather-jacket",
+            "plus_icon": "shopify://shop_images/plusIcon.svg"
+          }
+        },
+        "product_block_exUbxa": {
+          "type": "product_block",
+          "settings": {
+            "product": "classic-varsity-top",
+            "plus_icon": "shopify://shop_images/plusIcon.svg"
+          }
+        },
+        "product_block_ci9gDk": {
+          "type": "product_block",
+          "settings": {
+            "product": "dark-denim-top",
             "plus_icon": "shopify://shop_images/plusIcon.svg"
           }
         }
       },
       "block_order": [
         "product_block_XPtmbw",
-        "icon_wpAPEV"
+        "product_block_4WWznQ",
+        "product_block_mzafPU",
+        "product_block_JMNA3z",
+        "product_block_exUbxa",
+        "product_block_ci9gDk"
       ],
       "name": "Products Grid",
       "settings": {
