@@ -58,7 +58,9 @@ header .headerWrapper p {
   transition: 0.5s all ease-in-out;
 }
 
-
+.hamburger {
+  display: none;
+}
 
 /* Header Css Close */
 
@@ -71,6 +73,16 @@ header .headerWrapper p {
 
   .btn {
     padding: 8px 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mobileHide {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
   }
 }
 

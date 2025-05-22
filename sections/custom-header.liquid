@@ -1,22 +1,32 @@
 <header>
   <div class="container">
     <div class="headerWrapper">
-      <div class="logo">
-        <img width="" height="" src="{{ section.settings.logo |  img_url: 'master'  }}" alt="">
+      <div class="hamburger" id="hamburger" role="button">
+        <img width="" height="" src="{{ section.settings.menuicon |  img_url: 'master' }}">
       </div>
-      <div class="headerContent">
+
+      <div class="mobile-menu" id="mobileMenu">
         <p>{{ section.settings.tagline }}</p>
-      </div>
-      <div class="headerButton">
         <a class="btn" href="{{ section.settings.btn_link }}"> {{ section.settings.btn_text }} <img width="" height="" src="{{ section.settings.btn_icon |  img_url: 'master' }}"></a>
       </div>
 
-      <div class="hamburger" id="hamburger" role="button">
-<img width="" height="" src="{{ section.settings.menuicon |  img_url: 'master' }}">
+      <div class="logo">
+        <img width="" height="" src="{{ section.settings.logo |  img_url: 'master'  }}" alt="">
+      </div>
+      <div class="headerContent mobileHide">
+        <p>{{ section.settings.tagline }}</p>
+      </div>
+      <div class="headerButton mobileHide">
+        <a class="btn" href="{{ section.settings.btn_link }}"> {{ section.settings.btn_text }} <img width="" height="" src="{{ section.settings.btn_icon |  img_url: 'master' }}"></a>
       </div>
     </div>
   </div>
 </header>
+
+
+<script>
+    
+</script>
 
 {% schema %}
 {
