@@ -109,6 +109,10 @@ header .btn:hover img {
   transition: 0.5s all ease-in-out;
 }
 
+header .btn {
+  transition: 0.5s all ease-in-out;
+}
+
 /* Header Css Close */
 
 /* Banner Css Start */
