@@ -217,6 +217,45 @@ header .btn img {
 
 /* Banner Tagline Css Close */
 
+/* Product Grid Section Css Start */
+
+.ProductsGridSection .product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.ProductsGridSection .product-grid .product-card {
+  position: relative;
+  width: calc(33% - 20px);
+}
+
+.product-card img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  min-height: 440px;
+  object-fit: cover;
+}
+
+.plus-icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  min-height: 20px;
+}
+
+.ProductsGridSection {
+  padding: 80px 0px;
+}
+
+.ProductsGridSection h2 {
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+/* Product Grid Section Css Close */
+
 /* Responsive Css Start */
 
 @media (max-width: 1024px) {
