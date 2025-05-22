@@ -242,9 +242,23 @@ header .headerWrapper p {
     line-height: 32px;
   }
 
+  .banner .container {
+    padding: 0px;
+  }
+
+  .banner .BannerWrapper .bannerContent {
+    text-align: center;
+  }
+
+  .banner .container .BannerWrapper {
+    align-items: self-start;
+  }
+
   .banner p {
+    margin-bottom: 0px;
     font-size: 16px;
     line-height: 22px;
+    margin-top: 16px;
   }
 }
 
