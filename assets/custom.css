@@ -1,0 +1,22 @@
+/* Header Css Start */
+
+header {
+  background: #f5f5f5;
+  padding: 60px 0px;
+}
+
+.container {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+header .logo {
+  max-width: 200px;
+}
+
+header .logo img {
+  width: 100%;
+}
+
+/* Header Css Close */
