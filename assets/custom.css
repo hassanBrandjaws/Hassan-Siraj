@@ -1,6 +1,7 @@
 /* Reset Css Start */
 
 h1 {
+  font-family: 'Jost';
   font-size: 70px;
   font-weight: 500;
   color: #000;
@@ -67,6 +68,27 @@ header .headerWrapper p {
   transition: 0.5s all ease-in-out;
 }
 
+.BlackBtn {
+  background: #000;
+  border: 1px solid #000;
+  color: #fff;
+  padding: 12px 40px;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: 0.5s all ease-in-out;
+}
+
+.BlackBtn:hover {
+  background: #fff544;
+  border: 1px solid #fff544;
+  color: #000;
+  transition: 0.5s all ease-in-out;
+}
+
 .btn:hover {
   background: #000;
   border: 1px solid #000;
@@ -102,6 +124,7 @@ header .headerWrapper p {
 .banner .btn {
   background: #000;
   color: #fff;
+  border: 1px  #000;
 }
 
 /* Banner Css Close */
