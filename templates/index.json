@@ -44,6 +44,24 @@
     },
     "product_grid_BnW4EK": {
       "type": "product-grid",
+      "blocks": {
+        "product_block_XPtmbw": {
+          "type": "product_block",
+          "settings": {
+            "product": "black-leather-bag"
+          }
+        },
+        "icon_wpAPEV": {
+          "type": "icon",
+          "settings": {
+            "plus_icon": "shopify://shop_images/plusIcon.svg"
+          }
+        }
+      },
+      "block_order": [
+        "product_block_XPtmbw",
+        "icon_wpAPEV"
+      ],
       "name": "Products Grid",
       "settings": {
         "sectiontitle": "Tisso vison in the wild"
