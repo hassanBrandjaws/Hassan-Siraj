@@ -241,6 +241,11 @@ header .headerWrapper p {
     font-size: 30px;
     line-height: 32px;
   }
+
+  .banner p {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 
 /* Responsive Css Close */
