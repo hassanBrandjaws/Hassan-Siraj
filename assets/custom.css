@@ -84,6 +84,7 @@ header .headerWrapper p {
 
   header {
     box-shadow: 0px 2px 4px 0px #00000026;
+    z-index: 2;
   }
 
   .mobile-menu {
@@ -104,7 +105,7 @@ header .headerWrapper p {
 
   .hamburger,
   .spacer {
-    display: block;
+    display: block !important;
   }
 }
 
