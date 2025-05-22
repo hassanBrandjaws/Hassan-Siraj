@@ -1,0 +1,27 @@
+<header>
+  <div class="container">
+    <div class="headerWrapper">
+      <div class="logo">
+        <img width="" height="" src="{{ section.settings.logo |  img_url: 'master'  }}" alt="">
+      </div>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Custom Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Select Logo"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Header"
+    }
+  ]
+}
+{% endschema %}
