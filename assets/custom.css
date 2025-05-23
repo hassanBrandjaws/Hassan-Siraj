@@ -312,7 +312,8 @@ header .btn img {
   position: absolute;
   top: 12px;
   right: 15px;
-  font-size: 12px;
+  font-size: 26px;
+  line-height: 12px;
   cursor: pointer;
   color: #000;
 }

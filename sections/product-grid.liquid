@@ -29,39 +29,47 @@
                     <div class="product-price">{{ product.price | money }}</div>
                     <p class="popup-description">{{ product.description | strip_html | truncatewords: 20 }}</p>
                   </div>
-                  <div class="product-varients">
-                    {% assign color_options = product.options_by_name.Color %}
-                    {% assign size_options = product.options_by_name.Size %}
+                </div>
+                <div class="product-varients">
+                  {% assign color_options = product.options_by_name.Color %}
+                  {% assign size_options = product.options_by_name.Size %}
 
+                  {% comment %} Color Varient {% endcomment %}
 
-{% comment %} Color Varient {% endcomment %}
+                  {% if color_options %}
+                    <label class="varient-label">Color</label>
+                    <div class="color-options">
+                      {% for color in color_options.values %}
+                        <div
+                          class="color-box {{ color }}"
+                          data-color="{{ color }}"
+                          title="{{ color }}"
+                          style="border-color: {{ color }};"
+                        >
+                          <span class="color-label">{{ color }}</span>
+                        </div>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
 
-                    {% if color_options %}
-                      <label class="varient-label">Color</label>
-                      <div class="color-options">
-                        {% for color in color_options.values %}
-                            <div class="color-box {{ color }}" data-color="{{ color }}" title="{{ color }}" style="border-color: {{ color }};">
-                                <span class="color-label">{{ color }}</span>
-                            </div>
-                        {% endfor %}
-                      </div>
-                    {% endif %}
+                  {% comment %} Size Varient {% endcomment %}
 
+                  {% if color_options %}
+                    <label class="varient-label">Size</label>
+                    <select class="size-dropdown">
+                      {% for size in size_options.values %}
+                        <option value="{{ size }}">{{ size }}</option>
+                      {% endfor %}
+                    </select>
+                  {% endif %}
 
-{% comment %} Size Varient {% endcomment %}
-
-                    {% if color_options %}
-                      <label class="varient-label">Size</label>
-                      <select class="size-dropdown">
-                        {% for size in size_options.values %}
-                            <option value="{{ size }}">{{ size }}</option>
-                        {% endfor %}
-                      </select>
-                    {% endif %}
-
-
-                    <a class="popup-button BlackBtn" href="{{ product.url }}">Add to cart <img width="" height="" src="https://cdn.shopify.com/s/files/1/0955/0148/4400/files/rightarrow.svg?v=1747920837" /></a>
-                  </div>
+                  <a class="popup-button BlackBtn" href="{{ product.url }}"
+                    >Add to cart
+                    <img
+                      width=""
+                      height=""
+                      src="https://cdn.shopify.com/s/files/1/0955/0148/4400/files/rightarrow.svg?v=1747920837"
+                  ></a>
                 </div>
               </div>
             </div>
