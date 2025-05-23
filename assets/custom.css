@@ -380,6 +380,7 @@ header .btn img {
 
 .ProductsGridSection .color-box.selected .color-label {
   color: #fff;
+  position: relative;
   transition: 0.5s all ease-in-out;
 }
 
