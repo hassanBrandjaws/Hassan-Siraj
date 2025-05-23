@@ -124,13 +124,6 @@
         const card = icon.closest('.product-card');
         const popup = card.querySelector('.popup-overlay');
         popup.style.display = 'flex';
-      });
-    });
-
-    document.querySelectorAll('.popup-close').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const popup = btn.closest('.popup-overlay');
-        popup.style.display = 'none';
 
         const colorBoxes = popup.querySelectorAll('.color-box');
         colorBoxes.forEach((box) => {
@@ -139,6 +132,13 @@
             box.classList.add('selected');
           });
         });
+      });
+    });
+
+    document.querySelectorAll('.popup-close').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const popup = btn.closest('.popup-overlay');
+        popup.style.display = 'none';
       });
     });
 
