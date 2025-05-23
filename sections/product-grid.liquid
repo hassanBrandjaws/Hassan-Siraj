@@ -131,6 +131,14 @@
       btn.addEventListener('click', () => {
         const popup = btn.closest('.popup-overlay');
         popup.style.display = 'none';
+
+        const colorBoxes = popup.querySelectorAll('.color-box');
+        colorBoxes.forEach((box) => {
+          box.addEventListener('click', () => {
+            colorBoxes.forEach((b) => b.classList.remove('selected'));
+            box.classList.add('selected');
+          });
+        });
       });
     });
 
@@ -139,14 +147,6 @@
         if (e.target === overlay) {
           overlay.style.display = 'none';
         }
-      });
-    });
-
-    const colorBoxes = popup.querySelectorAll('.color-box');
-    colorBoxes.forEach((box) => {
-      box.addEventListener('click', () => {
-        colorBoxes.forEach((b) => b.classList.remove('selected'));
-        box.classList.add('selected');
       });
     });
   });
