@@ -330,6 +330,7 @@ header .btn img {
   gap: 0;
   margin-top: 8px;
 }
+
 .ProductsGridSection .color-box {
   width: 50%;
   border: 1px solid #000;
@@ -337,9 +338,13 @@ header .btn img {
   cursor: pointer;
   padding: 5px 12px;
 }
+
+
 .ProductsGridSection .color-box.selected {
   border-color: #000;
 }
+
+
 /* .ProductsGridSection .popup-button {
   background-color: black;
   color: #fff;
@@ -370,15 +375,16 @@ header .btn img {
   flex-wrap: wrap;
   align-items: flex-end;
   gap: 20px;
+  margin-bottom: 20px;
 }
 
 .ProductsGridSection .product-header .product-image {
-  max-width: calc(30% - 10px);
+  max-width: calc(40% - 10px);
   width: 100%;
 }
 
 .ProductsGridSection .product-header .product-info {
-  max-width: calc(70% - 10px);
+  max-width: calc(60% - 10px);
   width: 100%;
 }
 
