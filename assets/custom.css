@@ -311,8 +311,8 @@ header .btn img {
 
 .ProductsGridSection .popup-content .popup-close {
   position: absolute;
-  top: 12px;
-  right: 15px;
+  top: 20px;
+  right: 20px;
   font-size: 26px;
   line-height: 12px;
   cursor: pointer;
