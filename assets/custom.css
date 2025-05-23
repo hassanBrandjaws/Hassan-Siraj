@@ -447,6 +447,10 @@ header .btn img {
     height: 100%;
     padding-top: 360px;
   }
+
+  .ProductsGridSection .product-grid .product-card {
+    width: calc(33% - 11px);
+  }
 }
 
 @media (max-width: 991px) {
@@ -456,6 +460,10 @@ header .btn img {
 
   .btn {
     padding: 8px 24px;
+  }
+
+  .product-card img {
+    min-height: 300px;
   }
 }
 
@@ -542,6 +550,24 @@ header .btn img {
     font-size: 16px;
     line-height: 22px;
     margin-top: 16px;
+  }
+
+  .ProductsGridSection .product-grid .product-card {
+    width: calc(50% - 10px);
+  }
+
+  .product-card img {
+    min-height: 220px;
+  }
+
+  .ProductsGridSection h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .ProductsGridSection {
+    padding: 40px 0;
   }
 }
 
