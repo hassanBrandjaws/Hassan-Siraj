@@ -141,5 +141,13 @@
         }
       });
     });
+
+    const colorBoxes = popup.querySelectorAll('.color-box');
+    colorBoxes.forEach((box) => {
+      box.addEventListener('click', () => {
+        colorBoxes.forEach((b) => b.classList.remove('selected'));
+        box.classList.add('selected');
+      });
+    });
   });
 </script>
