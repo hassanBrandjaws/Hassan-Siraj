@@ -366,12 +366,24 @@ header .btn img {
   border-radius: 0;
   padding: 10px;
   font-size: 16px;
-  font-family: 'Jost';
+  outline: none;
+  font-family: Jost;
+  box-shadow: none;
+}
+
+.ProductsGridSection .color-box .color-label {
+  font-size: 18px;
+  color: #000;
+  font-weight: 400;
 }
 
 .ProductsGridSection .popup-button img {
   min-height: fit-content !important;
   width: fit-content !important;
+}
+
+.ProductsGridSection .popup-button {
+  margin-top: 20px;
 }
 
 .ProductsGridSection .product-header {
