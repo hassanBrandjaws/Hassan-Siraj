@@ -63,7 +63,7 @@
                     </select>
                   {% endif %}
 
-                  <button class="popup-button btn add-to-cart-button" data-product-handle="{{ product.handle }}">
+                  <button class="popup-button BlackBtn add-to-cart-button" data-product-handle="{{ product.handle }}">
                     Add to Cart
                     <img
                       width=""
@@ -161,10 +161,8 @@
       });
     });
   });
-</script>
 
-{% comment %} Add to cart button {% endcomment %}
-<script>
+
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.add-to-cart-button').forEach(button => {
       button.addEventListener('click', async function () {
