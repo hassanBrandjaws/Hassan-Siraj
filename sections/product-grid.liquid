@@ -166,56 +166,57 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.add-to-cart-button').forEach((button) => {
-      button.addEventListener('click', async function () {
-        const popup = button.closest('.popup-overlay');
-        const popupHandle = button.dataset.productHandle;
+    setTimeout(() => {
+      document.querySelectorAll('.add-to-cart-button').forEach((button) => {
+        button.addEventListener('click', async function () {
+          const popup = button.closest('.popup-overlay');
+          const popupHandle = button.dataset.productHandle;
 
-        const selectedColorBox = popup.querySelector('.color-box.selected');
-        const selectedColor = selectedColorBox ? selectedColorBox.dataset.color : null;
+          const selectedColorBox = popup.querySelector('.color-box.selected');
+          const selectedColor = selectedColorBox ? selectedColorBox.dataset.color : null;
 
-        const sizeSelect = popup.querySelector('.size-dropdown');
-        const selectedSize = sizeSelect ? sizeSelect.value : null;
+          const sizeSelect = popup.querySelector('.size-dropdown');
+          const selectedSize = sizeSelect ? sizeSelect.value : null;
 
-        if (!selectedColor || !selectedSize) {
-          alert('Please Select Both Color and Size');
-          return;
-        }
+          if (!selectedColor || !selectedSize) {
+            alert('Please Select Both Color and Size');
+            return;
+          }
 
-        const productData = await fetch(`/products/${productHandle}.js`).then(res => res.json());
+          const productData = await fetch(`/products/${productHandle}.js`).then((res) => res.json());
 
-        console.log('producthandle', producthandle);
+          console.log('producthandle', producthandle);
 
-
-        const matchedVarient = productData.variants.find((variant) => {
-          return variant.options.includes(selectedColor) && varient.options.includes(selectedSize);
-        });
-
-        if (!matchedVarient) {
-          alert('Selected variants not available');
-          return;
-        }
-
-        fetch('/cart/add.js', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            id: matchedVarient.id,
-            quantity: 1,
-          }),
-        })
-          .then((response) => {
-            if (!response.ok) throw new Error('Add to cart Failed');
-            return response.json();
-          })
-          .then((data) => {
-            alert('product added to cart!');
-          })
-          .catch((arr) => {
-            console.error(err);
-            alert('Error adding to cart.');
+          const matchedVarient = productData.variants.find((variant) => {
+            return variant.options.includes(selectedColor) && varient.options.includes(selectedSize);
           });
+
+          if (!matchedVarient) {
+            alert('Selected variants not available');
+            return;
+          }
+
+          fetch('/cart/add.js', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              id: matchedVarient.id,
+              quantity: 1,
+            }),
+          })
+            .then((response) => {
+              if (!response.ok) throw new Error('Add to cart Failed');
+              return response.json();
+            })
+            .then((data) => {
+              alert('product added to cart!');
+            })
+            .catch((arr) => {
+              console.error(err);
+              alert('Error adding to cart.');
+            });
+        });
       });
-    });
+    }, 500);
   });
 </script>
