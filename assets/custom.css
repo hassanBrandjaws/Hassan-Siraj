@@ -566,6 +566,7 @@ header .btn img {
 
   .banner .BannerWrapper .bannerContent {
     text-align: center;
+    padding-left: 30px !important;
   }
 
   .banner .container .BannerWrapper {
