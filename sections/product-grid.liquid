@@ -203,20 +203,23 @@
               id: matchedVarient.id,
               quantity: 1,
             }),
-          })
-            .then((response) => {
-              if (!response.ok) throw new Error('Add to cart Failed');
-              return response.json();
-            })
-            .then((data) => {
-              alert('product added to cart!');
-              popup.style.display = 'none';
-              window.location.href = '/cart';
-            })
-            .catch((arr) => {
-              console.error(err);
-              alert('Error adding to cart.');
-            });
+          });
+
+          popup.style.display = 'none';
+          window.location.href = '/cart';
+          // .then((response) => {
+          //   if (!response.ok) throw new Error('Add to cart Failed');
+          //   return response.json();
+          // })
+          // .then((data) => {
+          //   alert('product added to cart!');
+          //   popup.style.display = 'none';
+          //   window.location.href = '/cart';
+          // })
+          // .catch((arr) => {
+          //   console.error(err);
+          //   alert('Error adding to cart.');
+          // });
         });
       });
     }, 500);
