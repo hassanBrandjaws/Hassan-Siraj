@@ -249,6 +249,7 @@ header .btn img {
 .plus-icon {
   position: absolute;
   top: 54%;
+  cursor: pointer;
   z-index: 9;
   right: 37%;
 }
@@ -330,6 +331,8 @@ header .btn img {
   flex-wrap: wrap;
   margin-bottom: 10px;
   gap: 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
   margin-top: 8px;
 }
 
@@ -348,7 +351,8 @@ header .btn img {
   right: 0;
   top: 0;
   bottom: 0;
-  border: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
   background: transparent;
   width: 100%;
   height: 100%;
