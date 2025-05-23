@@ -182,10 +182,6 @@
           return;
         }
 
-        // const productData = await fetch(`/products/${productHandle}.js`).then(res => res.json());
-
-        const productUrl = button.dataset.productUrl;
-        const producthandle = productUrl.split('/products/')[1].replace('/', '');
         const productData = await fetch(`/products/${productHandle}.js`).then(res => res.json());
 
         console.log('producthandle', producthandle);
