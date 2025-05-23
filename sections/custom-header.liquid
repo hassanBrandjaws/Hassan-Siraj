@@ -1,0 +1,88 @@
+<header>
+  <div class="container">
+    <div class="headerWrapper">
+      <div class="hamburger" id="hamburger" role="button">
+        <img class="menuicon" width="" height="" src="{{ section.settings.menuicon |  img_url: 'master' }}">
+        <img class="closeicon" width="" height="" src="{{ section.settings.closeicon |  img_url: 'master' }}">
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <p>{{ section.settings.tagline }}</p>
+        <a class="btn" href="{{ section.settings.btn_link }}"> {{ section.settings.btn_text }} <img width="" height="" src="{{ section.settings.btn_icon |  img_url: 'master' }}"></a>
+      </div>
+
+      <div class="logo">
+        <img width="" height="" src="{{ section.settings.logo |  img_url: 'master'  }}" alt="">
+      </div>
+      
+      <div class="spacer"></div>
+      <div class="headerContent mobileHide">
+        <p>{{ section.settings.tagline }}</p>
+      </div>
+      <div class="headerButton mobileHide">
+        <a class="btn" href="{{ section.settings.btn_link }}"> {{ section.settings.btn_text }} <img width="" height="" src="{{ section.settings.btn_icon |  img_url: 'master' }}"></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', function(){
+            mobileMenu.classList.toggle('show');
+            hamburger.classList.toggle('active');
+        });
+    });
+</script>
+
+{% schema %}
+{
+  "name": "Custom Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Select Logo"
+    },
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Enter Tagline"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Enter Button Link"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Enter Button Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "btn_icon",
+      "label": "Select Button Icon"
+    },
+    {
+        "type": "image_picker",
+        "id": "menuicon",
+        "label": "Select Mobile Menu Icon"
+    },
+    {
+        "type": "image_picker",
+        "id": "closeicon",
+        "label": "Select Menu Closing Icon"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Header"
+    }
+  ]
+}
+{% endschema %}

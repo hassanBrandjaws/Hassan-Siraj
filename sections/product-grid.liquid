@@ -1,0 +1,227 @@
+<section class="ProductsGridSection">
+  <div class="container">
+    <h2>{{ section.settings.sectiontitle }}</h2>
+
+    <div class="product-grid">
+      {% for block in section.blocks %}
+        {% assign product = all_products[block.settings.product] %}
+        {% if product %}
+          <div class="product-card">
+            <img width="" height="" src="{{ product.featured_image |  img_url: 'master' }}" alt="{{ product.title }}">
+            <div class="plus-icon">
+              <img width="" height="" src="{{ block.settings.plus_icon |  img_url: 'master' }}" alt="">
+            </div>
+            <!-- Popup -->
+            <div class="popup-overlay">
+              <div class="popup-content">
+                <span class="popup-close">&times;</span>
+                <div class="product-header">
+                  <div class="product-image">
+                    <img
+                      width=""
+                      height=""
+                      src="{{ product.featured_image |  img_url: 'master' }}"
+                      alt="{{ product.title }}"
+                    >
+                  </div>
+                  <div class="product-info">
+                    <h4 class="popup-title">{{ product.title }}</h4>
+                    <h4 class="popup-title">{{ product.handle }}</h4>
+                    <div class="product-price">{{ product.price | money }}</div>
+                    <p class="popup-description">{{ product.description | strip_html | truncatewords: 20 }}</p>
+                  </div>
+                </div>
+                <div class="product-varients">
+                  {% assign color_options = product.options_by_name.Color %}
+                  {% assign size_options = product.options_by_name.Size %}
+
+                  {% comment %} Color Varient {% endcomment %}
+
+                  {% if color_options %}
+                    <label class="varient-label">Color</label>
+                    <div class="color-options">
+                      {% for color in color_options.values %}
+                        <div
+                          class="color-box {{ color }}"
+                          data-color="{{ color }}"
+                          title="{{ color }}"
+                          style="border-color: {{ color }};"
+                        >
+                          <span class="color-label">{{ color }}</span>
+                        </div>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+
+                  {% comment %} Size Varient {% endcomment %}
+
+                  {% if color_options %}
+                    <label class="varient-label">Size</label>
+                    <select class="size-dropdown">
+                      {% for size in size_options.values %}
+                        <option value="{{ size }}">{{ size }}</option>
+                      {% endfor %}
+                    </select>
+                  {% endif %}
+
+                  <button class="popup-button BlackBtn add-to-cart-button" data-product-handle="{{ product.handle }}">
+                    Add to Cart
+                    <img
+                      width=""
+                      height=""
+                      src="https://cdn.shopify.com/s/files/1/0955/0148/4400/files/rightarrow.svg?v=1747920837"
+                    >
+                  </button>
+
+                  {% comment %}
+                    <a class="popup-button BlackBtn" href="{{ product.url }}"
+                      >Add to cart
+                      <img
+                        width=""
+                        height=""
+                        src="https://cdn.shopify.com/s/files/1/0955/0148/4400/files/rightarrow.svg?v=1747920837"
+                    ></a>
+                  {% endcomment %}
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Products Grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "sectiontitle",
+      "label": "Section title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_block",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Select Product"
+        },
+        {
+          "type": "image_picker",
+          "id": "plus_icon",
+          "label": "Select Plus Icon"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Products Grid"
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.plus-icon').forEach((icon) => {
+      icon.addEventListener('click', () => {
+        const card = icon.closest('.product-card');
+        const popup = card.querySelector('.popup-overlay');
+        popup.style.display = 'flex';
+
+        const colorBoxes = popup.querySelectorAll('.color-box');
+        colorBoxes.forEach((box) => {
+          box.addEventListener('click', () => {
+            colorBoxes.forEach((b) => b.classList.remove('selected'));
+            box.classList.add('selected');
+          });
+        });
+      });
+    });
+
+    document.querySelectorAll('.popup-close').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const popup = btn.closest('.popup-overlay');
+        popup.style.display = 'none';
+      });
+    });
+
+    document.querySelectorAll('.popup-overlay').forEach((overlay) => {
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) {
+          overlay.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(() => {
+      document.querySelectorAll('.add-to-cart-button').forEach((button) => {
+        button.addEventListener('click', async function () {
+          const popup = button.closest('.popup-overlay');
+          const productHandle = button.dataset.productHandle;
+
+          const selectedColorBox = popup.querySelector('.color-box.selected');
+          const selectedColor = selectedColorBox ? selectedColorBox.dataset.color : null;
+
+          const sizeSelect = popup.querySelector('.size-dropdown');
+          const selectedSize = sizeSelect ? sizeSelect.value : null;
+
+          if (!selectedColor || !selectedSize) {
+            alert('Please Select Both Color and Size');
+            return;
+          }
+
+          const productData = await fetch(`/products/${productHandle}.js`).then((res) => res.json());
+
+          console.log('productHandle', productHandle);
+
+          const matchedVarient = productData.variants.find((variant) => {
+            return variant.options.includes(selectedColor) && variant.options.includes(selectedSize);
+          });
+
+          if (!matchedVarient) {
+            alert('Selected variants not available');
+            return;
+          }
+
+          fetch('/cart/add.js', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              id: matchedVarient.id,
+              quantity: 1,
+            }),
+          });
+
+          popup.style.display = 'none';
+          window.location.href = '/cart?forceRefresh=true';
+          // .then((response) => {
+          //   if (!response.ok) throw new Error('Add to cart Failed');
+          //   return response.json();
+          // })
+          // .then((data) => {
+          //   alert('product added to cart!');
+          //   popup.style.display = 'none';
+          //   window.location.href = '/cart';
+          // })
+          // .catch((arr) => {
+          //   console.error(err);
+          //   alert('Error adding to cart.');
+          // });
+        });
+      });
+    }, 500);
+  });
+</script>

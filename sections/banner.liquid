@@ -1,0 +1,72 @@
+<section
+  class="banner"
+  style="background: {{ section.settings.bannerbackground_color }} url({{ section.settings.banner_image |  img_url: 'master' }});"
+>
+  <div class="container">
+    <div class="BannerWrapper">
+      <div class="bannerContent">
+        {% if section.settings.bannerHeading != blank %}
+          <h1>{{ section.settings.bannerHeading }}</h1>
+        {% endif %}
+        {% if section.settings.bannerParagraph != blank %}
+          <p>{{ section.settings.bannerParagraph }}</p>
+        {% endif %}
+        {% if section.settings.bannerBtnText != blank %}
+          <a class="btn" href="{{ section.settings.bannerBtnLink }}">{{ section.settings.bannerBtnText }} <img width="" height="" src="{{ section.settings.buttonicon |  img_url: 'master' }}" /></a>
+        {% endif %}
+      </div>
+      {% if section.settings.bannerBtnText != blank %}
+        <a class="btn MobileBtn" href="{{ section.settings.bannerBtnLink }}">{{ section.settings.bannerBtnText }} <img width="" height="" src="{{ section.settings.buttonicon |  img_url: 'master' }}" /></a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Banner Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner Background Image"
+    },
+    {
+      "type": "color",
+      "id": "bannerbackground_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "bannerHeading",
+      "label": "Banner Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "bannerParagraph",
+      "label": "Banner Paragraph"
+    },
+    {
+      "type": "url",
+      "id": "bannerBtnLink",
+      "label": "Banner Button Url"
+    },
+    {
+      "type": "text",
+      "id": "bannerBtnText",
+      "label": "Banner Button Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "buttonicon",
+      "label": "Select Button Icon"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner Section"
+    }
+  ]
+}
+{% endschema %}
