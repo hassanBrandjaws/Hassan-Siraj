@@ -173,8 +173,8 @@
         const selectedColorBox = popup.querySelector('.color-box.selected');
         const selectedColor = selectedColorBox ? selectedColorBox.dataset.color : null;
 
-    const sizeSelect = popup.querySelector('.size-dropdown');
-    const selectedSize = sizeSelect ? sizeSelect.value : null;
+        const sizeSelect = popup.querySelector('.size-dropdown');
+        const selectedSize = sizeSelect ? sizeSelect.value : null;
 
         if (!selectedColor || !selectedSize ){
           alert('Please Select Both Color and Size');
@@ -189,6 +189,7 @@
             varient.options.includes(selectedSize)
           );
         });
+        console.log("matchedVarient", matchedVarient)
 
         if (!matchedVarient) {
           alert('Selected variants not available');
