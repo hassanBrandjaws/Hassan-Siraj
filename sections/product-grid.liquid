@@ -64,7 +64,7 @@
                     </select>
                   {% endif %}
 
-                  <button class="popup-button BlackBtn add-to-cart-button" data-product-url="{{ product.url }}">
+                  <button class="popup-button BlackBtn add-to-cart-button" data-product-handle="{{ product.handle }}">
                     Add to Cart
                     <img
                       width=""
@@ -188,10 +188,12 @@
         const producthandle = productUrl.split('/products/')[1].replace('/', '');
         const productData = await fetch(`/products/${productHandle}.js`).then(res => res.json());
 
+        console.log('producthandle', producthandle);
+
+
         const matchedVarient = productData.variants.find((variant) => {
           return variant.options.includes(selectedColor) && varient.options.includes(selectedSize);
         });
-        console.log('matchedVarient', matchedVarient);
 
         if (!matchedVarient) {
           alert('Selected variants not available');
