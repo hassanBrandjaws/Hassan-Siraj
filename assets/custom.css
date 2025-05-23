@@ -368,7 +368,8 @@ header .btn img {
 .ProductsGridSection .product-header {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: flex-end;
+  gap: 20px;
 }
 
 .ProductsGridSection .product-header .product-image {
@@ -390,10 +391,11 @@ header .btn img {
 }
 
 .ProductsGridSection .product-header .product-info h4 {
-  margin: 0px;
-  font-size: 16px;
-  color: black;
+  margin: 0;
+  font-size: 20px;
+  color: #000;
   font-weight: 300;
+  font-family: 'Jost';
 }
 
 .ProductsGridSection .product-header .product-info .product-price {
@@ -405,6 +407,9 @@ header .btn img {
   margin-bottom: 16px;
 }
 
+.ProductsGridSection .product-header .product-card img {
+  min-height: 230px;
+}
 /* Product Grid Section Css Close */
 
 /* Responsive Css Start */
