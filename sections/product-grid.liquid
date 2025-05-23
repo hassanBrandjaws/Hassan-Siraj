@@ -170,7 +170,7 @@
       document.querySelectorAll('.add-to-cart-button').forEach((button) => {
         button.addEventListener('click', async function () {
           const popup = button.closest('.popup-overlay');
-          const popupHandle = button.dataset.productHandle;
+          const productHandle = button.dataset.productHandle;
 
           const selectedColorBox = popup.querySelector('.color-box.selected');
           const selectedColor = selectedColorBox ? selectedColorBox.dataset.color : null;
@@ -185,7 +185,7 @@
 
           const productData = await fetch(`/products/${productHandle}.js`).then((res) => res.json());
 
-          console.log('producthandle', producthandle);
+          console.log('productHandle', productHandle);
 
           const matchedVarient = productData.variants.find((variant) => {
             return variant.options.includes(selectedColor) && varient.options.includes(selectedSize);
