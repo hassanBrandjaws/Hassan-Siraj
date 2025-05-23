@@ -63,7 +63,7 @@
                     </select>
                   {% endif %}
 
-                  <button class="popup-button BlackBtn add-to-cart-button" data-product-handle="{{ product.handle }}">
+                  <button class="popup-button BlackBtn add-to-cart-button" data-product-url="{{ product.url }}">
                     Add to Cart
                     <img
                       width=""
@@ -164,8 +164,8 @@
 </script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.add-to-cart-button').forEach(button => {
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.add-to-cart-button').forEach((button) => {
       button.addEventListener('click', async function () {
         const popup = button.closest('.popup-overlay');
         const popupHandle = button.dataset.productHandle;
@@ -176,46 +176,46 @@
         const sizeSelect = popup.querySelector('.size-dropdown');
         const selectedSize = sizeSelect ? sizeSelect.value : null;
 
-        if (!selectedColor || !selectedSize ){
+        if (!selectedColor || !selectedSize) {
           alert('Please Select Both Color and Size');
           return;
         }
 
+        // const productData = await fetch(`/products/${productHandle}.js`).then(res => res.json());
+
+        const productUrl = button.dataset.productUrl;
+        const producthandle = productUrl.split('/products/')[1].replace('/', '');
         const productData = await fetch(`/products/${productHandle}.js`).then(res => res.json());
 
-        const matchedVarient = productData.variants.find(variant => {
-          return(
-            variant.options.includes(selectedColor) &&
-            varient.options.includes(selectedSize)
-          );
+        const matchedVarient = productData.variants.find((variant) => {
+          return variant.options.includes(selectedColor) && varient.options.includes(selectedSize);
         });
-        console.log("matchedVarient", matchedVarient)
+        console.log('matchedVarient', matchedVarient);
 
         if (!matchedVarient) {
           alert('Selected variants not available');
           return;
         }
 
-
-        fetch('/cart/add.js' , {
+        fetch('/cart/add.js', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             id: matchedVarient.id,
-            quantity: 1
+            quantity: 1,
+          }),
+        })
+          .then((response) => {
+            if (!response.ok) throw new Error('Add to cart Failed');
+            return response.json();
           })
-        })
-        .then(response => {
-          if (!response.ok) throw new Error('Add to cart Failed');
-          return response.json();
-        })
-        .then(data => {
-          alert('product added to cart!');
-        })
-        .catch(arr => {
-          console.error(err);
-          alert('Error adding to cart.');
-        });
+          .then((data) => {
+            alert('product added to cart!');
+          })
+          .catch((arr) => {
+            console.error(err);
+            alert('Error adding to cart.');
+          });
       });
     });
   });
