@@ -419,6 +419,7 @@ header .btn img {
 .ProductsGridSection .popup-button {
   margin-top: 20px;
   width: 100%;
+  font-family: 'Jost' !important;
   justify-content: center;
 }
 
